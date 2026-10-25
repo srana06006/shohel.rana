@@ -1,6 +1,8 @@
 # Asset notes
 
 - The profile portrait was supplied for this site.
+- The portrait used in the About section (`shohel-rana-about.png`) was supplied for this site.
+- The Anichur Rahman and Tanoy Debnath portraits were supplied for this site.
 - Institution and employer marks are stored locally so the page does not depend on remote image hosting.
 - Georgia Southern, UMass Dartmouth, FGCU, UAB, Southern Miss, Daffodil International University, and BRAC IT marks came from organization websites or official brand pages.
 - The NKU logo crop is from the supplied LinkedIn-style screenshot.
