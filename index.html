@@ -101,13 +101,28 @@
     .question-top { display: grid; grid-template-columns: .75fr 1.25fr; gap: 9%; align-items: start; }
     .question-top .eyebrow { margin-top: 12px; }
     .question-top .section-title { max-width: 720px; }
-    .question-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 62px; border: 1px solid var(--line); background: var(--line); }
-    .question-step { min-height: 220px; padding: 28px 30px; background: var(--paper); }
-    .step-number { display: block; margin-bottom: 42px; color: #9a6d31; font-family: var(--serif); font-size: 1.2rem; }
-    .question-step h3 { margin: 0 0 9px; font-family: var(--serif); font-size: 1.6rem; font-weight: 500; letter-spacing: -.025em; }
-    .question-step p { margin: 0; color: #607081; font-size: .91rem; }
-    .connector { position: absolute; width: 13px; height: 13px; right: -7px; top: 49%; z-index: 2; border: 3px solid var(--paper); border-radius: 50%; background: var(--coral); }
-    .question-step:last-child .connector { display: none; }
+    .reliability-figure{margin:54px 0 0;padding:25px 26px 18px;border:1px solid rgba(17,31,48,.12);background:linear-gradient(145deg,#fff 0%,rgba(255,255,255,.68) 100%);box-shadow:0 20px 48px rgba(17,31,48,.045)}
+    .reliability-figure-head{display:flex;align-items:center;justify-content:space-between;gap:18px;padding-bottom:17px;border-bottom:1px solid rgba(17,31,48,.1)}
+    .reliability-figure-label{display:flex;align-items:center;gap:9px;color:#647384;font-size:.65rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap}
+    .reliability-figure-label::before{width:18px;height:1px;background:var(--coral);content:""}
+    .reliability-domains{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+    .reliability-domain{display:inline-flex;align-items:center;gap:7px;padding:7px 11px;border:1px solid rgba(17,31,48,.11);border-radius:99px;background:var(--paper);color:#3d4c58;font-size:.7rem;font-weight:700;white-space:nowrap}
+    .reliability-domain svg{width:16px;height:16px;flex:none;fill:none;stroke:#8e6b3c;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.7}
+    .reliability-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}
+    .reliability-stage{position:relative;display:flex;min-width:0;min-height:326px;flex-direction:column;padding:17px 18px 15px;border:1px solid rgba(17,31,48,.1);background:var(--paper)}
+    .reliability-stage:not(:last-child)::after{position:absolute;z-index:2;top:105px;right:-18px;width:18px;height:1px;background:rgba(17,31,48,.28);content:""}
+    .reliability-stage:not(:last-child)::before{position:absolute;z-index:3;top:101px;right:-18px;width:8px;height:8px;border-top:1px solid rgba(17,31,48,.44);border-right:1px solid rgba(17,31,48,.44);background:var(--paper);content:"";transform:rotate(45deg)}
+    .reliability-stage-step{color:#9a6d31;font-family:var(--serif);font-size:1.05rem}
+    .reliability-visual{height:92px;display:grid;place-items:center;overflow:hidden;margin:14px 0 15px;border:1px solid rgba(17,31,48,.07);background:linear-gradient(145deg,rgba(112,208,189,.09),rgba(239,189,97,.08))}
+    .reliability-visual svg{display:block;width:100%;height:100%}
+    .reliability-stage h3{margin:0 0 8px;font-family:var(--serif);font-size:1.42rem;font-weight:500;letter-spacing:-.03em;line-height:1.12}
+    .reliability-stage p{margin:0;color:#607081;font-size:.82rem;line-height:1.52}
+    .reliability-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:13px}
+    .reliability-tags span{padding:5px 8px;border:1px solid rgba(190,94,77,.19);border-radius:99px;background:rgba(190,94,77,.045);color:#865e55;font-size:.61rem;font-weight:700}
+    .reliability-tags--context span{border-color:rgba(154,109,49,.2);background:rgba(239,189,97,.08);color:#79613e}
+    .reliability-tags--decision span{border-color:rgba(73,151,132,.2);background:rgba(112,208,189,.08);color:#477e72}
+    .reliability-figure figcaption{display:flex;align-items:center;gap:9px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(17,31,48,.1);color:#74818c;font-size:.72rem}
+    .reliability-caption-mark{width:7px;height:7px;flex:none;border-radius:50%;background:var(--teal)}
     .research { padding: 112px 0 120px; background: var(--paper-2); }
     .research-header { display: flex; justify-content: space-between; align-items: end; gap: 42px; }
     .research-header .section-intro { max-width: 440px; margin-bottom: 7px; }
@@ -235,10 +250,17 @@
       .signal-label--two { right: -1%; }
       .question, .research, .works, .bio { padding: 78px 0; }
       .question-top, .bio-grid, .teaching-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
-      .question-grid { grid-template-columns: 1fr; margin-top: 36px; }
-      .question-step { min-height: auto; padding: 22px 24px; }
-      .step-number { margin-bottom: 17px; }
-      .connector { display: none; }
+      .reliability-figure { margin-top: 36px; padding: 18px 14px 15px; }
+      .reliability-figure-head { align-items: flex-start; flex-direction: column; gap: 13px; }
+      .reliability-domains { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: start; gap: 7px; }
+      .reliability-domain { justify-content: flex-start; padding: 7px 9px; }
+      .reliability-flow { grid-template-columns: 1fr; gap: 12px; margin-top: 14px; }
+      .reliability-stage { min-height: 0; padding: 16px; }
+      .reliability-stage:not(:last-child)::after { top: auto; right: auto; bottom: -13px; left: 50%; width: 1px; height: 13px; }
+      .reliability-stage:not(:last-child)::before { top: auto; right: auto; bottom: -13px; left: calc(50% - 3px); transform: rotate(135deg); }
+      .reliability-visual { height: 78px; margin: 12px 0 13px; }
+      .reliability-stage h3 { font-size: 1.35rem; }
+      .reliability-figure figcaption { font-size: .68rem; }
       .research-header { align-items: start; flex-direction: column; gap: 10px; }
       .research-grid { gap: 10px; margin-top: 34px; }
       .research-card { min-height: 290px; padding: 23px 19px; }
@@ -378,25 +400,41 @@
             <p class="section-intro">Across media, health, security, and agriculture, the work follows a common path: understand the signal, account for its context, and make the resulting decision easier to trust.</p>
           </div>
         </div>
-        <div class="question-grid" aria-label="Three steps in the research approach" data-i18n-aria-en="Three steps in the research approach" data-i18n-aria-bn="গবেষণা পদ্ধতির তিনটি ধাপ">
-          <article class="question-step">
-            <span class="step-number">01 / Observe</span>
-            <h3>Read the signal</h3>
-            <p>Combine images, audio, optical measurements, wearables, and environmental sensing to capture what a single source can miss.</p>
-            <span class="connector" aria-hidden="true"></span>
-          </article>
-          <article class="question-step">
-            <span class="step-number">02 / Contextualize</span>
-            <h3>Test what changes</h3>
-            <p>Study uncertainty, distribution shifts, adversarial behavior, and the conditions that affect how evidence should be interpreted.</p>
-            <span class="connector" aria-hidden="true"></span>
-          </article>
-          <article class="question-step">
-            <span class="step-number">03 / Support</span>
-            <h3>Make decisions useful</h3>
-            <p>Design explainable models and human-centered tools for settings where reliability carries real consequences.</p>
-          </article>
-        </div>
+        <figure class="reliability-figure" aria-label="One shared research path across four application areas" data-i18n-aria-en="One shared research path across four application areas" data-i18n-aria-bn="চারটি প্রয়োগক্ষেত্রের জন্য একটি অভিন্ন গবেষণা-পথ">
+          <div class="reliability-figure-head">
+            <span class="reliability-figure-label">One method. Four application areas.</span>
+            <div class="reliability-domains" role="list" aria-label="Application areas" data-i18n-aria-en="Application areas" data-i18n-aria-bn="প্রয়োগক্ষেত্র">
+              <span class="reliability-domain" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="m10 8 6 4-6 4z"></path></svg><span>Media</span></span>
+              <span class="reliability-domain" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l2.4-5 4.2 10 3-7H22"></path></svg><span>Health</span></span>
+              <span class="reliability-domain" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5.5c0 4.2-3.1 7.4-8 9.5-4.9-2.1-8-5.3-8-9.5V6z"></path><path d="m9 12 2 2 4-4"></path></svg><span>Security</span></span>
+              <span class="reliability-domain" role="listitem"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C11 4 5 7.4 5 13c0 3.2 2.4 5 5 5 5.4 0 8-6.3 10-14Z"></path><path d="M3 21c3-5 6-8 11-11"></path></svg><span>Agriculture</span></span>
+            </div>
+          </div>
+          <div class="reliability-flow" role="list" aria-label="Three steps in the research approach" data-i18n-aria-en="Three steps in the research approach" data-i18n-aria-bn="গবেষণা পদ্ধতির তিনটি ধাপ">
+            <article class="reliability-stage" role="listitem">
+              <span class="reliability-stage-step">01 / Observe</span>
+              <div class="reliability-visual" aria-hidden="true"><svg viewBox="0 0 320 92" preserveAspectRatio="none"><path d="M14 23H306M14 46H306M14 69H306" fill="none" stroke="#dfe5e2" stroke-width="1"></path><path d="M18 48h30l11-12 12 25 13-39 12 51 12-27 13 8h24" fill="none" stroke="#4c9a8e" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path d="M160 54h18l9-21 11 34 12-22 11 9h21" fill="none" stroke="#c77a68" stroke-dasharray="5 4" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path d="M260 48h13l8-11 9 24 10-13h4" fill="none" stroke="#9a6d31" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><circle cx="150" cy="54" r="4" fill="#efbd61"></circle><circle cx="245" cy="54" r="4" fill="#efbd61"></circle></svg></div>
+              <h3>Read the signal</h3>
+              <p>Combine images, audio, optical measurements, wearables, and environmental sensing to capture what a single source can miss.</p>
+              <div class="reliability-tags"><span>Incomplete</span><span>Noisy</span><span>Manipulated</span></div>
+            </article>
+            <article class="reliability-stage" role="listitem">
+              <span class="reliability-stage-step">02 / Contextualize</span>
+              <div class="reliability-visual" aria-hidden="true"><svg viewBox="0 0 320 92"><circle cx="160" cy="46" r="33" fill="none" stroke="#d8c59d" stroke-dasharray="3 5" stroke-width="1.5"></circle><path d="M91 27 136 41M228 25l-44 16M98 67l39-15m83 14-40-15" fill="none" stroke="#94a1a2" stroke-linecap="round" stroke-width="1.5"></path><path d="M136 41 160 46l24-5m-24 5-23 6m23-6 23 6" fill="none" stroke="#55998c" stroke-linecap="round" stroke-width="2"></path><circle cx="160" cy="46" r="11" fill="#e6f2ee" stroke="#55998c" stroke-width="2"></circle><circle cx="91" cy="27" r="5" fill="#efbd61"></circle><circle cx="228" cy="25" r="5" fill="#c77a68"></circle><circle cx="98" cy="67" r="5" fill="#c77a68"></circle><circle cx="222" cy="66" r="5" fill="#efbd61"></circle><circle cx="137" cy="52" r="4" fill="#55998c"></circle><circle cx="183" cy="52" r="4" fill="#55998c"></circle></svg></div>
+              <h3>Test what changes</h3>
+              <p>Study uncertainty, distribution shifts, adversarial behavior, and the conditions that affect how evidence should be interpreted.</p>
+              <div class="reliability-tags reliability-tags--context"><span>Uncertainty</span><span>Distribution shift</span><span>Adversarial behavior</span></div>
+            </article>
+            <article class="reliability-stage" role="listitem">
+              <span class="reliability-stage-step">03 / Support</span>
+              <div class="reliability-visual" aria-hidden="true"><svg viewBox="0 0 320 92"><path d="M28 46h45m0 0h30m0 0h30m0 0h34m0 0h37" fill="none" stroke="#95a3a7" stroke-linecap="round" stroke-width="2"></path><circle cx="38" cy="46" r="14" fill="#fff" stroke="#9a6d31" stroke-width="2"></circle><path d="m32 46 4 4 8-9" fill="none" stroke="#9a6d31" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><rect x="105" y="27" width="67" height="38" rx="5" fill="#fff" stroke="#aab6b6" stroke-width="1.5"></rect><path d="M116 39h43M116 47h31M116 55h23" stroke="#9ba8a8" stroke-linecap="round" stroke-width="2"></path><circle cx="229" cy="46" r="22" fill="#e4f1ec" stroke="#55998c" stroke-width="2"></circle><path d="m218 46 7 7 15-16" fill="none" stroke="#438778" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path><path d="M251 46h39" stroke="#55998c" stroke-linecap="round" stroke-width="2"></path><circle cx="296" cy="46" r="4" fill="#55998c"></circle></svg></div>
+              <h3>Make decisions useful</h3>
+              <p>Design explainable models and human-centered tools for settings where reliability carries real consequences.</p>
+              <div class="reliability-tags reliability-tags--decision"><span>Explainable</span><span>Human-centered</span><span>Useful</span></div>
+            </article>
+          </div>
+          <figcaption><span class="reliability-caption-mark" aria-hidden="true"></span><span>Signal → context → trustworthy decision</span></figcaption>
+        </figure>
       </div>
     </section>
 
