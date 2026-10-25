@@ -50,12 +50,12 @@
     .section-intro { max-width: 680px; margin: 22px 0 0; color: #5c6c7c; font-size: 1.08rem; }
     .topbar { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(255,255,255,.1); background: rgba(17,31,48,.94); color: var(--white); backdrop-filter: blur(16px); }
     .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .brand { display: inline-flex; gap: 12px; align-items: center; text-decoration: none; color: white; }
-    .brand-mark { width: 37px; height: 37px; display: grid; place-items: center; overflow: hidden; border: 1px solid rgba(239,189,97,.65); border-radius: 50%; background: #172638; }
-    .brand-mark img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
-    .brand-copy { display: grid; line-height: 1.1; }
-    .brand-copy strong { font-size: .87rem; letter-spacing: .02em; }
-    .brand-copy span { margin-top: 5px; color: #9eacb9; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+    .brand { display: inline-flex; gap: 13px; align-items: center; text-decoration: none; color: white; }
+    .brand-mark { width: 46px; height: 46px; flex: 0 0 46px; display: grid; place-items: center; overflow: hidden; border: 1.5px solid rgba(239,189,97,.72); border-radius: 50%; background: #172638; box-shadow: 0 2px 10px rgba(0,0,0,.24), 0 0 0 3px rgba(255,255,255,.035); }
+    .brand-mark img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 29%; transform: scale(1.5); }
+    .brand-copy { display: grid; align-content: center; gap: 5px; line-height: 1.15; }
+    .brand-copy strong { font-size: .91rem; letter-spacing: .015em; }
+    .brand-copy span { color: #aeb9c4; font-size: .63rem; letter-spacing: .13em; line-height: 1.1; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 38px); }
     .nav-links a { color: #d5dce1; font-size: .83rem; text-decoration: none; transition: color .2s ease; }
     .nav-links a:hover { color: var(--gold); }
@@ -151,11 +151,12 @@
     .works-footnote { margin: 25px 0 0; color: #94a3ae; font-size: .73rem; }
     .bio { padding: 116px 0; background: var(--white); }
     .bio-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; }
-    .bio-aside { position: relative; min-height: 440px; overflow: hidden; padding: 30px; background: var(--ink); color: white; }
-    .bio-aside::before { position: absolute; width: 320px; height: 320px; right: -110px; top: -60px; border: 1px solid rgba(239,189,97,.33); border-radius: 50%; content: ""; box-shadow: 0 0 0 27px rgba(239,189,97,.045), 0 0 0 55px rgba(112,208,189,.04), 0 0 0 86px rgba(255,255,255,.025); }
-    .bio-aside-label { position: relative; z-index: 1; color: #aab8c2; font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-    .bio-aside h3 { position: relative; z-index: 1; max-width: 300px; margin: 135px 0 10px; font-family: var(--serif); font-size: 2.15rem; font-weight: 500; line-height: 1.1; }
-    .bio-aside p { position: relative; z-index: 1; margin: 0; color: #b6c1c9; font-size: .85rem; }
+    .bio-aside { position: relative; min-height: 440px; overflow: hidden; padding: 30px; background: var(--ink); background-image: url("assets/shohel-rana-about.png"); background-position: center 28%; background-size: cover; background-repeat: no-repeat; color: white; isolation: isolate; }
+    .bio-aside::before { position: absolute; inset: 0; z-index: 0; content: ""; background: linear-gradient(180deg, rgba(17,31,48,.16) 0%, rgba(17,31,48,.02) 28%, rgba(17,31,48,.48) 53%, rgba(17,31,48,.94) 82%); pointer-events: none; }
+    .bio-aside-content { position: absolute; right: 30px; bottom: 30px; left: 30px; z-index: 1; max-width: 350px; }
+    .bio-aside-label { color: #d8e0e5; font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .bio-aside h3 { max-width: 320px; margin: 12px 0 10px; font-family: var(--serif); font-size: clamp(1.85rem, 2.5vw, 2.15rem); font-weight: 500; line-height: 1.1; }
+    .bio-aside p { margin: 0; color: #e3e9ed; font-size: .85rem; line-height: 1.55; }
     .bio-copy { padding-top: 15px; }
     .bio-copy .section-title { max-width: 620px; font-size: clamp(2.3rem, 4.8vw, 4rem); }
     .bio-copy > p { max-width: 660px; color: #5d6d7d; font-size: 1rem; }
@@ -171,6 +172,22 @@
     .teaching-item::before { content: "↗"; color: #af7835; font-size: .8rem; }
     .student-note { margin-top: 35px; padding: 22px 24px; border-left: 3px solid var(--coral); background: rgba(251,250,246,.65); color: #516273; font-size: .88rem; }
     .student-note strong { color: var(--ink); }
+    .advisees { padding: 108px 0 116px; background: var(--paper-2); }
+    .advisees-header { display: grid; grid-template-columns: 1fr .9fr; gap: 8%; align-items: end; }
+    .advisees-header .section-title { max-width: 700px; }
+    .advisees-header .section-intro { max-width: 510px; margin: 0 0 6px; }
+    .advisee-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 46px; }
+    .advisee-card { min-height: 286px; display: flex; flex-direction: column; padding: 26px 28px 24px; border: 1px solid rgba(17,31,48,.13); background: var(--white); }
+    .advisee-meta { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(17,31,48,.12); }
+    .advisee-number { color: #9a6d31; font-family: var(--serif); font-size: 1.1rem; }
+    .advisee-status { color: #68737d; font-size: .76rem; font-weight: 750; text-align: right; }
+    .advisee-person { display: grid; grid-template-columns: 86px minmax(0, 1fr); align-items: center; gap: 17px; margin: 20px 0 11px; }
+    .advisee-photo { display: block; width: 86px; height: 86px; object-fit: cover; object-position: center 30%; border: 2px solid var(--white); border-radius: 50%; box-shadow: 0 0 0 1px rgba(17,31,48,.2); }
+    .advisee-person h3 { margin: 0; font-family: var(--serif); font-size: 1.72rem; font-weight: 500; letter-spacing: -.035em; line-height: 1.14; }
+    .advisee-card > p { max-width: 520px; margin: 0; color: #5c6c7c; font-size: .91rem; }
+    .advisee-links { display: flex; flex-wrap: wrap; gap: 11px 22px; margin-top: auto; padding-top: 28px; }
+    .advisee-links a { color: var(--ink); font-size: .82rem; font-weight: 750; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+    .advisee-links a:hover { color: #95692e; }
     .contact { position: relative; overflow: hidden; padding: 108px 0 96px; background: var(--ink); color: var(--white); }
     .contact::after { position: absolute; width: 570px; height: 570px; right: -200px; bottom: -340px; content: ""; border: 1px solid rgba(112,208,189,.23); border-radius: 50%; box-shadow: 0 0 0 35px rgba(112,208,189,.035), 0 0 0 72px rgba(239,189,97,.035), 0 0 0 112px rgba(255,255,255,.025); pointer-events: none; }
     .contact-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: end; gap: 60px; }
@@ -228,8 +245,8 @@
       .project-grid { grid-template-columns: 1fr; margin-top: 35px; }
       .project-card { min-height: auto; }
       .project-card .project-visual { min-height: 55px; }
-      .bio-aside { min-height: 300px; }
-      .bio-aside h3 { margin-top: 82px; }
+      .bio-aside { width: min(100%, 430px); min-height: 0; aspect-ratio: .72; margin-inline: auto; padding: 22px; }
+      .bio-aside-content { right: 22px; bottom: 22px; left: 22px; }
       .credential-row { margin-top: 20px; }
       .teaching { padding: 78px 0; }
       .teaching-list { gap: 0 15px; }
@@ -238,8 +255,8 @@
       .footer-inner { align-items: flex-start; flex-direction: column; }
     }
     @media (max-width: 460px) {
-      .brand-copy span { font-size: .57rem; }
-      .brand-mark { width: 34px; height: 34px; }
+      .brand-copy span { font-size: .55rem; letter-spacing: .11em; }
+      .brand-mark { width: 40px; height: 40px; flex-basis: 40px; }
       .research-grid { grid-template-columns: 1fr; }
       .research-card { min-height: 260px; }
       .teaching-list { grid-template-columns: 1fr; }
@@ -285,6 +302,8 @@
     html[lang="bn"] .brand-copy span,html[lang="bn"] .eyebrow,html[lang="bn"] .tag,html[lang="bn"] .figure-caption{letter-spacing:0}
     @media(max-width:980px){.profile-figure{width:min(100%,430px)}.experience-header{grid-template-columns:1fr;gap:10px}}
     @media(max-width:720px){.profile-figure{width:min(100%,390px);justify-self:center}.experience{padding:78px 0}.experience-item{grid-template-columns:50px minmax(0,1fr);gap:13px;padding:18px 15px}.experience-logo{width:48px;height:48px}.experience-list{margin-top:34px}.language-switch{justify-content:space-between;padding:12px 7px}.language-switch select{min-width:100px}html[lang="bn"] .hero h1{font-size:clamp(2.4rem,10vw,3.7rem)}}
+    @media(max-width:980px){.advisees-header{grid-template-columns:1fr;gap:10px}}
+    @media(max-width:720px){.advisees{padding:78px 0}.advisee-grid{grid-template-columns:1fr;margin-top:34px}.advisee-card{min-height:0;padding:22px}.advisee-links{padding-top:22px}}
   </style>
 </head>
 <body>
@@ -303,6 +322,7 @@
         <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#teaching">Teaching</a>
+        <a href="#advisees">Advisees</a>
         <label class="language-switch"><span>Language</span><select id="language-select" aria-label="Choose language" data-i18n-aria-en="Choose language" data-i18n-aria-bn="ভাষা নির্বাচন করুন"><option value="en">English</option><option value="bn">বাংলা</option></select></label>
         <a href="https://scholar.google.com/citations?user=jjM9zsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Publications <span aria-hidden="true">↗</span></a>
         <a class="nav-contact" href="#contact">Connect <span aria-hidden="true">↗</span></a>
@@ -500,9 +520,11 @@
     <section class="bio" id="about" aria-labelledby="about-title">
       <div class="wrap bio-grid">
         <aside class="bio-aside">
-          <span class="bio-aside-label">Research profile</span>
-          <h3>AI for systems that need to earn trust.</h3>
-          <p>Assistant Professor · School of Computing<br>Georgia Southern University</p>
+          <div class="bio-aside-content">
+            <span class="bio-aside-label">Research profile</span>
+            <h3>AI for systems that need to earn trust.</h3>
+            <p>Assistant Professor · School of Computing<br>Georgia Southern University</p>
+          </div>
         </aside>
         <div class="bio-copy">
           <p class="eyebrow">About</p>
@@ -594,6 +616,43 @@
           <div class="teaching-item">Secure software development</div>
           <div class="teaching-item">AI in bioinformatics</div>
           <div class="teaching-item">Cybersecurity innovation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="advisees" id="advisees" aria-labelledby="advisees-title">
+      <div class="wrap">
+        <div class="advisees-header">
+          <div>
+            <p class="eyebrow">Doctoral mentorship</p>
+            <h2 class="section-title" id="advisees-title">Current PhD advisees</h2>
+          </div>
+          <p class="section-intro">Doctoral researchers in Applied Computing at Georgia Southern University.</p>
+        </div>
+        <div class="advisee-grid" role="list" aria-label="Current PhD advisees" data-i18n-aria-en="Current PhD advisees" data-i18n-aria-bn="বর্তমান পিএইচডি শিক্ষার্থীরা">
+          <article class="advisee-card" role="listitem">
+            <div class="advisee-meta"><span class="advisee-number">01</span><span class="advisee-status">Ph.D. student · Applied Computing</span></div>
+            <div class="advisee-person">
+              <img class="advisee-photo" src="assets/anichur-rahman.png" alt="Anichur Rahman, PhD advisee" data-i18n-alt-en="Anichur Rahman, PhD advisee" data-i18n-alt-bn="Anichur Rahman, পিএইচডি পরামর্শার্থী" width="512" height="512" loading="lazy" decoding="async">
+              <h3>Anichur Rahman</h3>
+            </div>
+            <p>Research spans blockchain and software-defined networking for secure IoT, alongside privacy-preserving AI for healthcare.</p>
+            <div class="advisee-links">
+              <a href="https://www.researchgate.net/profile/Anichur-Rahman" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+              <a href="https://anis.researchustad.org/" target="_blank" rel="noopener noreferrer">Personal website ↗</a>
+            </div>
+          </article>
+          <article class="advisee-card" role="listitem">
+            <div class="advisee-meta"><span class="advisee-number">02</span><span class="advisee-status">Ph.D. student · Applied Computing</span></div>
+            <div class="advisee-person">
+              <img class="advisee-photo" src="assets/tanoy-debnath.png" alt="Tanoy Debnath, PhD advisee" data-i18n-alt-en="Tanoy Debnath, PhD advisee" data-i18n-alt-bn="Tanoy Debnath, পিএইচডি পরামর্শার্থী" width="400" height="400" loading="lazy" decoding="async">
+              <h3>Tanoy Debnath</h3>
+            </div>
+            <p>Research interests include computer vision, machine learning, quantum computing, and healthcare data analytics.</p>
+            <div class="advisee-links">
+              <a href="https://www.researchgate.net/profile/Tanoy-Debnath-2" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
