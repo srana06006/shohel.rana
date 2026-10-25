@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111f30">
+  <title>Md. Shohel Rana | Assistant Professor, Georgia Southern University</title>
+  <meta name="description" content="Md. Shohel Rana is an Assistant Professor at Georgia Southern University researching trustworthy AI, cybersecurity, media forensics, and computational sensing.">
+  <link rel="canonical" href="https://YOUR-GITHUB-USERNAME.github.io/">
+  <meta property="og:title" content="Md. Shohel Rana | Assistant Professor &amp; Researcher">
+  <meta property="og:description" content="Assistant Professor at Georgia Southern University working across trustworthy AI, cybersecurity, media forensics, computational health, and agriculture.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://YOUR-GITHUB-USERNAME.github.io/">
+  <style>
+    :root {
+      --ink: #111f30;
+      --ink-2: #1a2b3d;
+      --paper: #f4f1e9;
+      --paper-2: #ebe7dc;
+      --white: #fbfaf6;
+      --gold: #efbd61;
+      --teal: #70d0bd;
+      --coral: #e98568;
+      --blue: #92b9e8;
+      --muted: #a9b4bd;
+      --body: #314255;
+      --line: rgba(17, 31, 48, .15);
+      --sans: Inter, "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body { overflow-x: clip; margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    button { font: inherit; }
+    img, svg { max-width: 100%; }
+    .skip-link { position: absolute; left: 16px; top: -70px; z-index: 1000; padding: 12px 16px; background: var(--gold); color: var(--ink); border-radius: 6px; font-weight: 700; }
+    .skip-link:focus { top: 12px; }
+    :focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
+    .wrap { width: min(calc(100% - 48px), var(--max)); margin-inline: auto; }
+    .eyebrow { display: inline-flex; gap: 10px; align-items: center; margin: 0 0 20px; color: #627487; font-size: .73rem; font-weight: 800; letter-spacing: .15em; line-height: 1.3; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 25px; height: 2px; background: var(--coral); }
+    .eyebrow--light { color: #aab8c2; }
+    .eyebrow--light::before { background: var(--gold); }
+    .section-title { max-width: 760px; margin: 0; font-family: var(--serif); font-size: clamp(2.35rem, 5vw, 4.55rem); font-weight: 500; letter-spacing: -.045em; line-height: 1.05; }
+    .section-intro { max-width: 680px; margin: 22px 0 0; color: #5c6c7c; font-size: 1.08rem; }
+    .topbar { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid rgba(255,255,255,.1); background: rgba(17,31,48,.94); color: var(--white); backdrop-filter: blur(16px); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; gap: 12px; align-items: center; text-decoration: none; color: white; }
+    .brand-mark { width: 37px; height: 37px; display: grid; place-items: center; border: 1px solid rgba(239,189,97,.65); border-radius: 50%; color: var(--gold); font-family: var(--serif); font-size: .95rem; }
+    .brand-copy { display: grid; line-height: 1.1; }
+    .brand-copy strong { font-size: .87rem; letter-spacing: .02em; }
+    .brand-copy span { margin-top: 5px; color: #9eacb9; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: clamp(18px, 3vw, 38px); }
+    .nav-links a { color: #d5dce1; font-size: .83rem; text-decoration: none; transition: color .2s ease; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links .nav-contact { padding: 10px 16px; border: 1px solid rgba(239,189,97,.55); border-radius: 100px; color: var(--gold); }
+    .nav-toggle { display: none; width: 42px; height: 42px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: transparent; color: white; cursor: pointer; }
+    .hero { position: relative; overflow: hidden; padding: 86px 0 78px; background: var(--ink); color: var(--white); }
+    .hero::before { position: absolute; inset: 0; content: ""; opacity: .24; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(90deg, transparent, black 48%, black); }
+    .hero::after { position: absolute; width: 650px; height: 650px; right: -260px; top: -280px; content: ""; border-radius: 50%; background: radial-gradient(circle, rgba(112,208,189,.12), transparent 67%); pointer-events: none; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.04fr .96fr; align-items: center; gap: clamp(40px, 7vw, 96px); }
+    .hero-copy { padding: 10px 0 22px; }
+    .hero .eyebrow { color: #a9b7c2; }
+    .hero h1 { max-width: 690px; margin: 0; font-family: var(--serif); font-size: clamp(3.4rem, 6.8vw, 6.55rem); font-weight: 500; letter-spacing: -.065em; line-height: .99; }
+    .hero h1 em { color: var(--gold); font-weight: 500; }
+    .hero-lead { max-width: 590px; margin: 27px 0 0; color: #c4cdd4; font-size: clamp(1.02rem, 1.5vw, 1.18rem); line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 33px; }
+    .button { display: inline-flex; min-height: 48px; align-items: center; justify-content: center; gap: 10px; padding: 12px 19px; border: 1px solid transparent; border-radius: 99px; text-decoration: none; font-size: .87rem; font-weight: 750; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+    .button:hover { transform: translateY(-2px); }
+    .button--gold { background: var(--gold); color: var(--ink); }
+    .button--gold:hover { background: #ffd17b; }
+    .button--quiet { border-color: rgba(255,255,255,.25); color: #e6eaed; }
+    .button--quiet:hover { border-color: var(--teal); color: var(--teal); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 9px 20px; margin-top: 42px; color: #9eacb8; font-size: .78rem; }
+    .hero-meta span { display: inline-flex; gap: 9px; align-items: center; }
+    .hero-meta span::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--teal); }
+    .signal-figure { position: relative; max-width: 540px; margin: 0; justify-self: end; }
+    .signal-frame { position: relative; aspect-ratio: 1 / 1; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; background: radial-gradient(circle at 50% 48%, rgba(112,208,189,.1), rgba(17,31,48,.16) 56%, rgba(17,31,48,.02) 75%); }
+    .signal-frame::before, .signal-frame::after { position: absolute; inset: 9%; border: 1px solid rgba(255,255,255,.13); border-radius: 50%; content: ""; }
+    .signal-frame::after { inset: 23%; border-color: rgba(239,189,97,.21); }
+    .signal-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .orbit { transform-origin: 250px 250px; animation: orbit 52s linear infinite; }
+    .orbit--reverse { animation-direction: reverse; animation-duration: 67s; }
+    .dashline { stroke-dasharray: 5 11; animation: dash 18s linear infinite; }
+    .signal-label { position: absolute; display: grid; gap: 3px; padding: 9px 12px; border: 1px solid rgba(255,255,255,.15); border-radius: 7px; background: rgba(17,31,48,.86); backdrop-filter: blur(10px); }
+    .signal-label small { color: #91a2ae; font-size: .58rem; font-weight: 800; letter-spacing: .14em; }
+    .signal-label strong { color: var(--white); font-size: .79rem; font-weight: 650; }
+    .signal-label--one { left: 2%; top: 20%; }
+    .signal-label--two { right: -2%; top: 34%; }
+    .signal-label--three { left: 13%; bottom: 13%; }
+    .signal-label--four { right: 8%; bottom: 10%; }
+    .figure-caption { display: flex; justify-content: space-between; gap: 18px; margin: 18px 4% 0; color: #93a2ad; font-size: .69rem; letter-spacing: .04em; text-transform: uppercase; }
+    .figure-caption strong { color: #d8e0e4; font-weight: 600; }
+    .question { position: relative; padding: 114px 0 112px; background: var(--paper); }
+    .question-top { display: grid; grid-template-columns: .75fr 1.25fr; gap: 9%; align-items: start; }
+    .question-top .eyebrow { margin-top: 12px; }
+    .question-top .section-title { max-width: 720px; }
+    .question-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 62px; border: 1px solid var(--line); background: var(--line); }
+    .question-step { min-height: 220px; padding: 28px 30px; background: var(--paper); }
+    .step-number { display: block; margin-bottom: 42px; color: #9a6d31; font-family: var(--serif); font-size: 1.2rem; }
+    .question-step h3 { margin: 0 0 9px; font-family: var(--serif); font-size: 1.6rem; font-weight: 500; letter-spacing: -.025em; }
+    .question-step p { margin: 0; color: #607081; font-size: .91rem; }
+    .connector { position: absolute; width: 13px; height: 13px; right: -7px; top: 49%; z-index: 2; border: 3px solid var(--paper); border-radius: 50%; background: var(--coral); }
+    .question-step:last-child .connector { display: none; }
+    .research { padding: 112px 0 120px; background: var(--paper-2); }
+    .research-header { display: flex; justify-content: space-between; align-items: end; gap: 42px; }
+    .research-header .section-intro { max-width: 440px; margin-bottom: 7px; }
+    .research-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 55px; }
+    .research-card { position: relative; min-height: 345px; display: flex; flex-direction: column; padding: 27px 24px 24px; border: 1px solid rgba(17,31,48,.14); background: rgba(251,250,246,.72); transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+    .research-card:hover { transform: translateY(-5px); background: var(--white); box-shadow: 0 18px 36px rgba(17,31,48,.07); }
+    .research-card .card-index { color: #9a6d31; font-family: var(--serif); font-size: 1.1rem; }
+    .card-mark { width: 51px; height: 51px; display: grid; place-items: center; margin: 28px 0 22px; border: 1px solid rgba(17,31,48,.17); border-radius: 50%; }
+    .card-mark svg { width: 25px; height: 25px; }
+    .research-card h3 { margin: 0 0 12px; font-family: var(--serif); font-size: 1.48rem; font-weight: 500; letter-spacing: -.035em; line-height: 1.13; }
+    .research-card p { margin: 0; color: #647384; font-size: .88rem; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: auto; padding-top: 24px; }
+    .tag { padding: 5px 9px; border: 1px solid rgba(17,31,48,.14); border-radius: 99px; color: #56677a; font-size: .66rem; font-weight: 700; }
+    .works { padding: 115px 0 122px; background: var(--ink); color: var(--white); }
+    .works .section-intro { color: #b2bec7; }
+    .works-header { display: flex; justify-content: space-between; align-items: end; gap: 36px; }
+    .works-header .section-title { max-width: 670px; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+    .filter-button { padding: 9px 13px; border: 1px solid rgba(255,255,255,.2); border-radius: 99px; background: transparent; color: #d1d9df; cursor: pointer; font-size: .72rem; font-weight: 750; transition: color .2s ease, background .2s ease, border-color .2s ease; }
+    .filter-button:hover, .filter-button[aria-pressed="true"] { border-color: var(--gold); background: var(--gold); color: var(--ink); }
+    .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 54px; }
+    .project-card { display: flex; flex-direction: column; min-height: 395px; padding: clamp(24px, 3vw, 34px); border: 1px solid rgba(255,255,255,.15); background: rgba(255,255,255,.045); transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+    .project-card:hover { transform: translateY(-3px); border-color: rgba(112,208,189,.55); background: rgba(255,255,255,.065); }
+    .project-card[hidden] { display: none; }
+    .project-topline { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+    .project-category { color: var(--teal); font-size: .66rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .project-status { padding: 5px 9px; border: 1px solid rgba(255,255,255,.19); border-radius: 99px; color: #c3ccd3; font-size: .62rem; font-weight: 700; white-space: nowrap; }
+    .project-card h3 { max-width: 520px; margin: 24px 0 12px; font-family: var(--serif); font-size: clamp(1.55rem, 2.5vw, 2.25rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.1; }
+    .project-card > p { max-width: 580px; margin: 0; color: #bac5cd; font-size: .91rem; }
+    .project-visual { display: flex; flex-wrap: wrap; min-height: 64px; align-items: center; gap: 8px; margin-top: auto; padding-top: 25px; }
+    .chip { padding: 7px 10px; border: 1px solid rgba(255,255,255,.15); border-radius: 5px; color: #dae1e4; font-size: .69rem; }
+    .chip--gold { border-color: rgba(239,189,97,.55); color: var(--gold); }
+    .chip--teal { border-color: rgba(112,208,189,.42); color: var(--teal); }
+    .project-metrics { display: flex; flex-wrap: wrap; gap: 17px 28px; margin-top: 23px; padding-top: 19px; border-top: 1px solid rgba(255,255,255,.13); }
+    .metric strong { display: block; color: var(--gold); font-family: var(--serif); font-size: 1.5rem; font-weight: 500; line-height: 1.1; }
+    .metric span { display: block; margin-top: 4px; color: #9eacb8; font-size: .66rem; }
+    .project-note { margin-top: 15px !important; color: #9eacb8 !important; font-size: .73rem !important; line-height: 1.55; }
+    .project-card details { margin-top: 22px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,.13); }
+    .project-card summary { width: fit-content; color: var(--teal); cursor: pointer; font-size: .76rem; font-weight: 750; list-style-position: inside; }
+    .project-card details p { margin: 12px 0 0; color: #b2bec7; font-size: .83rem; }
+    .works-footnote { margin: 25px 0 0; color: #94a3ae; font-size: .73rem; }
+    .bio { padding: 116px 0; background: var(--white); }
+    .bio-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9%; }
+    .bio-aside { position: relative; min-height: 440px; overflow: hidden; padding: 30px; background: var(--ink); color: white; }
+    .bio-aside::before { position: absolute; width: 320px; height: 320px; right: -110px; top: -60px; border: 1px solid rgba(239,189,97,.33); border-radius: 50%; content: ""; box-shadow: 0 0 0 27px rgba(239,189,97,.045), 0 0 0 55px rgba(112,208,189,.04), 0 0 0 86px rgba(255,255,255,.025); }
+    .bio-aside-label { position: relative; z-index: 1; color: #aab8c2; font-size: .68rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .bio-aside h3 { position: relative; z-index: 1; max-width: 300px; margin: 135px 0 10px; font-family: var(--serif); font-size: 2.15rem; font-weight: 500; line-height: 1.1; }
+    .bio-aside p { position: relative; z-index: 1; margin: 0; color: #b6c1c9; font-size: .85rem; }
+    .bio-copy { padding-top: 15px; }
+    .bio-copy .section-title { max-width: 620px; font-size: clamp(2.3rem, 4.8vw, 4rem); }
+    .bio-copy > p { max-width: 660px; color: #5d6d7d; font-size: 1rem; }
+    .bio-copy > p:first-of-type { margin-top: 25px; color: #33475a; font-size: 1.11rem; }
+    .credential-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 30px; }
+    .credential { padding: 16px 17px; border-top: 1px solid var(--line); }
+    .credential strong { display: block; font-size: .78rem; }
+    .credential span { display: block; margin-top: 4px; color: #738191; font-size: .75rem; }
+    .teaching { padding: 102px 0 110px; background: #e5e1d6; }
+    .teaching-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 10%; }
+    .teaching-list { display: grid; grid-template-columns: 1fr 1fr; gap: 0 26px; margin-top: 12px; }
+    .teaching-item { display: flex; gap: 13px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid rgba(17,31,48,.14); color: #34475a; font-size: .87rem; }
+    .teaching-item::before { content: "↗"; color: #af7835; font-size: .8rem; }
+    .student-note { margin-top: 35px; padding: 22px 24px; border-left: 3px solid var(--coral); background: rgba(251,250,246,.65); color: #516273; font-size: .88rem; }
+    .student-note strong { color: var(--ink); }
+    .contact { position: relative; overflow: hidden; padding: 108px 0 96px; background: var(--ink); color: var(--white); }
+    .contact::after { position: absolute; width: 570px; height: 570px; right: -200px; bottom: -340px; content: ""; border: 1px solid rgba(112,208,189,.23); border-radius: 50%; box-shadow: 0 0 0 35px rgba(112,208,189,.035), 0 0 0 72px rgba(239,189,97,.035), 0 0 0 112px rgba(255,255,255,.025); pointer-events: none; }
+    .contact-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; align-items: end; gap: 60px; }
+    .contact .section-title { max-width: 700px; }
+    .contact .section-intro { color: #b4c0c8; }
+    .contact-links { display: flex; flex-direction: column; align-items: flex-start; gap: 11px; }
+    .contact-email { display: inline-flex; align-items: center; gap: 13px; margin-bottom: 13px; color: var(--gold); font-family: var(--serif); font-size: clamp(1.25rem, 2.5vw, 1.8rem); text-decoration-thickness: 1px; text-underline-offset: 6px; }
+    .contact-links > a:not(.contact-email) { color: #bdc8cf; font-size: .83rem; text-decoration: none; }
+    .contact-links > a:not(.contact-email):hover { color: var(--teal); }
+    .footer { padding: 23px 0; background: #0d1927; color: #93a2ae; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+    .footer p { margin: 0; font-size: .72rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer-links a { color: #bec7cd; font-size: .72rem; text-decoration: none; }
+    .footer-links a:hover { color: var(--gold); }
+    .to-top { text-decoration: none; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @keyframes dash { to { stroke-dashoffset: -256; } }
+    @media (max-width: 980px) {
+      .hero-grid { grid-template-columns: 1fr .85fr; gap: 28px; }
+      .hero h1 { font-size: clamp(3.2rem, 7.7vw, 5.7rem); }
+      .research-grid { grid-template-columns: repeat(2, 1fr); }
+      .research-card { min-height: 300px; }
+      .works-header { align-items: start; flex-direction: column; }
+      .filter-bar { justify-content: flex-start; }
+      .bio-grid { gap: 6%; }
+    }
+    @media (max-width: 720px) {
+      .wrap { width: min(calc(100% - 36px), var(--max)); }
+      html { scroll-padding-top: 70px; }
+      .nav { min-height: 68px; }
+      .nav-toggle { display: grid; place-items: center; }
+      .nav-links { position: absolute; display: none; top: 68px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 10px 18px 20px; border-bottom: 1px solid rgba(255,255,255,.13); background: #111f30; }
+      .nav-links.is-open { display: flex; }
+      .nav-links a { padding: 12px 7px; }
+      .nav-links .nav-contact { margin-top: 7px; text-align: center; }
+      .hero { padding: 64px 0 58px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 24px; }
+      .hero h1 { max-width: 620px; font-size: clamp(3.15rem, 13vw, 5.3rem); }
+      .hero-meta { margin-top: 31px; }
+      .signal-figure { width: min(100%, 450px); justify-self: center; margin-top: 7px; }
+      .signal-label--one { left: 0; }
+      .signal-label--two { right: -1%; }
+      .question, .research, .works, .bio { padding: 78px 0; }
+      .question-top, .bio-grid, .teaching-grid, .contact-grid { grid-template-columns: 1fr; gap: 35px; }
+      .question-grid { grid-template-columns: 1fr; margin-top: 36px; }
+      .question-step { min-height: auto; padding: 22px 24px; }
+      .step-number { margin-bottom: 17px; }
+      .connector { display: none; }
+      .research-header { align-items: start; flex-direction: column; gap: 10px; }
+      .research-grid { gap: 10px; margin-top: 34px; }
+      .research-card { min-height: 290px; padding: 23px 19px; }
+      .card-mark { margin: 22px 0 18px; }
+      .project-grid { grid-template-columns: 1fr; margin-top: 35px; }
+      .project-card { min-height: auto; }
+      .project-card .project-visual { min-height: 55px; }
+      .bio-aside { min-height: 300px; }
+      .bio-aside h3 { margin-top: 82px; }
+      .credential-row { margin-top: 20px; }
+      .teaching { padding: 78px 0; }
+      .teaching-list { gap: 0 15px; }
+      .contact { padding: 78px 0 75px; }
+      .contact-grid { gap: 32px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 460px) {
+      .brand-copy span { font-size: .57rem; }
+      .brand-mark { width: 34px; height: 34px; }
+      .research-grid { grid-template-columns: 1fr; }
+      .research-card { min-height: 260px; }
+      .teaching-list { grid-template-columns: 1fr; }
+      .credential-row { grid-template-columns: 1fr; gap: 0; }
+      .signal-label { padding: 7px 9px; }
+      .signal-label strong { font-size: .68rem; }
+      .signal-label small { font-size: .52rem; }
+      .figure-caption { font-size: .59rem; }
+      .project-topline { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .project-status { white-space: normal; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Md. Shohel Rana, home">
+        <span class="brand-mark" aria-hidden="true">SR</span>
+        <span class="brand-copy"><strong>Md. Shohel Rana</strong><span>Research &amp; Teaching</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" aria-label="Open navigation menu">
+        <svg width="19" height="19" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <nav class="nav-links" id="primary-navigation" aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="https://scholar.google.com/citations?user=jjM9zsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Publications <span aria-hidden="true">↗</span></a>
+        <a class="nav-contact" href="#contact">Connect <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--light">Assistant Professor · Computing · Trust · Real-world signals</p>
+          <h1>Researching AI that can be <em>trusted in the wild.</em></h1>
+          <p class="hero-lead">I am an Assistant Professor in the School of Computing at Georgia Southern University. My research connects artificial intelligence, cybersecurity, and computational sensing to help systems interpret uncertain signals, verify what they see, and support better decisions.</p>
+          <div class="hero-actions">
+            <a class="button button--gold" href="#research">Explore the research <span aria-hidden="true">↓</span></a>
+            <a class="button button--quiet" href="https://scholar.google.com/citations?user=jjM9zsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
+            <a class="button button--quiet" href="https://scholars.georgiasouthern.edu/en/persons/md-shohel-rana/" target="_blank" rel="noopener noreferrer">Georgia Southern profile <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Professional affiliation">
+            <span>Assistant Professor</span>
+            <span>School of Computing</span>
+            <span>Georgia Southern University</span>
+          </div>
+        </div>
+        <figure class="signal-figure" aria-labelledby="signal-caption">
+          <div class="signal-frame">
+            <svg class="signal-svg" viewBox="0 0 500 500" role="img" aria-label="Abstract research map connecting media, security, sensing, and environment">
+              <defs>
+                <linearGradient id="traceA" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#70d0bd" stop-opacity=".1"/><stop offset=".55" stop-color="#70d0bd"/><stop offset="1" stop-color="#efbd61"/></linearGradient>
+                <linearGradient id="traceB" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#92b9e8" stop-opacity=".12"/><stop offset=".6" stop-color="#92b9e8"/><stop offset="1" stop-color="#e98568"/></linearGradient>
+                <radialGradient id="core"><stop offset="0" stop-color="#70d0bd" stop-opacity=".24"/><stop offset="1" stop-color="#70d0bd" stop-opacity="0"/></radialGradient>
+              </defs>
+              <circle cx="250" cy="250" r="118" fill="url(#core)"/>
+              <g fill="none" stroke="rgba(255,255,255,.14)" stroke-width="1">
+                <circle cx="250" cy="250" r="85"/><circle cx="250" cy="250" r="126"/><circle cx="250" cy="250" r="171"/><circle cx="250" cy="250" r="211"/>
+                <path d="M250 32v436M32 250h436M96 96l308 308M404 96 96 404" opacity=".55"/>
+              </g>
+              <g class="orbit" fill="none">
+                <ellipse cx="250" cy="250" rx="205" ry="96" transform="rotate(-38 250 250)" stroke="url(#traceA)" stroke-width="2.2"/>
+                <path d="M62 278c34-44 58-44 91 0s57 44 90 0 58-44 91 0 58 44 103 0" stroke="#70d0bd" stroke-width="2.4" opacity=".9"/>
+                <circle cx="108" cy="139" r="5" fill="#efbd61" stroke="none"/><circle cx="395" cy="174" r="4" fill="#70d0bd" stroke="none"/>
+              </g>
+              <g class="orbit orbit--reverse" fill="none">
+                <ellipse cx="250" cy="250" rx="154" ry="63" transform="rotate(35 250 250)" stroke="url(#traceB)" stroke-width="1.7"/>
+                <path class="dashline" d="M90 194c38 20 62 20 100 0s62-20 100 0 62 20 120 0" stroke="#efbd61" stroke-width="1.3" opacity=".8"/>
+                <circle cx="352" cy="356" r="5" fill="#e98568" stroke="none"/><circle cx="165" cy="359" r="4" fill="#92b9e8" stroke="none"/>
+              </g>
+              <circle cx="250" cy="250" r="13" fill="#111f30" stroke="#efbd61" stroke-width="2"/>
+              <circle cx="250" cy="250" r="4" fill="#efbd61"/>
+              <text x="250" y="240" fill="#aab8c2" text-anchor="middle" font-size="8" font-family="sans-serif" letter-spacing="2">SIGNAL</text>
+              <text x="250" y="274" fill="#fbfaf6" text-anchor="middle" font-size="10" font-family="sans-serif" letter-spacing="1">CONTEXT → ACTION</text>
+            </svg>
+            <div class="signal-label signal-label--one"><small>01 / VERIFY</small><strong>Media integrity</strong></div>
+            <div class="signal-label signal-label--two"><small>02 / PROTECT</small><strong>Cybersecurity</strong></div>
+            <div class="signal-label signal-label--three"><small>03 / MEASURE</small><strong>Health sensing</strong></div>
+            <div class="signal-label signal-label--four"><small>04 / ADAPT</small><strong>Smart agriculture</strong></div>
+          </div>
+          <figcaption class="figure-caption" id="signal-caption"><strong>One research lens</strong><span>From signal to decision</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="question" aria-labelledby="question-title">
+      <div class="wrap">
+        <div class="question-top">
+          <p class="eyebrow">A shared research question</p>
+          <div>
+            <h2 class="section-title" id="question-title">What makes an intelligent system reliable when the signal is incomplete, noisy, or manipulated?</h2>
+            <p class="section-intro">Across media, health, security, and agriculture, the work follows a common path: understand the signal, account for its context, and make the resulting decision easier to trust.</p>
+          </div>
+        </div>
+        <div class="question-grid" aria-label="Three steps in the research approach">
+          <article class="question-step">
+            <span class="step-number">01 / Observe</span>
+            <h3>Read the signal</h3>
+            <p>Combine images, audio, optical measurements, wearables, and environmental sensing to capture what a single source can miss.</p>
+            <span class="connector" aria-hidden="true"></span>
+          </article>
+          <article class="question-step">
+            <span class="step-number">02 / Contextualize</span>
+            <h3>Test what changes</h3>
+            <p>Study uncertainty, distribution shifts, adversarial behavior, and the conditions that affect how evidence should be interpreted.</p>
+            <span class="connector" aria-hidden="true"></span>
+          </article>
+          <article class="question-step">
+            <span class="step-number">03 / Support</span>
+            <h3>Make decisions useful</h3>
+            <p>Design explainable models and human-centered tools for settings where reliability carries real consequences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="research" id="research" aria-labelledby="research-title">
+      <div class="wrap">
+        <div class="research-header">
+          <div>
+            <p class="eyebrow">Research directions</p>
+            <h2 class="section-title" id="research-title">Four connected frontiers.</h2>
+          </div>
+          <p class="section-intro">The projects bring together machine learning, computer vision, sensing, and security around questions with practical stakes.</p>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <span class="card-index">01</span>
+            <div class="card-mark" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M3 14h4l3-8 5 16 4-12 2 4h4" stroke="#1a2b3d" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="12" stroke="#e98568" stroke-width="1.2" stroke-dasharray="3 3"/></svg>
+            </div>
+            <h3>Trustworthy media &amp; deepfake forensics</h3>
+            <p>Multimodal methods for detecting synthetic media, checking audio–visual synchronization, and studying how authenticity signals behave under change.</p>
+            <div class="card-tags"><span class="tag">Computer vision</span><span class="tag">Media integrity</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-index">02</span>
+            <div class="card-mark" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M14 3 23 6v7c0 5-3.5 9-9 12-5.5-3-9-7-9-12V6l9-3Z" stroke="#1a2b3d" stroke-width="1.5" stroke-linejoin="round"/><path d="m9.5 14 3 3 6-7" stroke="#70a99d" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>AI security &amp; human protection</h3>
+            <p>Security research spanning access control, federated learning, AI red-teaming, and agentic support for identifying and responding to fraud.</p>
+            <div class="card-tags"><span class="tag">Cybersecurity</span><span class="tag">Responsible AI</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-index">03</span>
+            <div class="card-mark" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M4 19c3-8 6-8 9 0s6 8 11 0M4 12c3-8 6-8 9 0s6 8 11 0" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round"/><circle cx="14" cy="14" r="12" stroke="#92b9e8" stroke-width="1.2"/></svg>
+            </div>
+            <h3>Computational health sensing</h3>
+            <p>Modeling optical and wearable measurements to investigate non-invasive metabolic screening, multimodal health data, and future quantum sensing.</p>
+            <div class="card-tags"><span class="tag">Raman–NIR</span><span class="tag">Wearables</span></div>
+          </article>
+          <article class="research-card">
+            <span class="card-index">04</span>
+            <div class="card-mark" aria-hidden="true">
+              <svg viewBox="0 0 28 28" fill="none"><path d="M14 24V5m0 8c-5 0-8-3-8-7 5 0 8 2 8 7Zm0 4c5 0 8-3 8-7-5 0-8 2-8 7Z" stroke="#1a2b3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 24h18" stroke="#e98568" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>AI for agriculture &amp; environment</h3>
+            <p>Fusing UAV imagery, thermal sensing, and IoT measurements to support soil assessment and more precise irrigation decisions.</p>
+            <div class="card-tags"><span class="tag">Multimodal AI</span><span class="tag">Edge systems</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="works" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="works-header">
+          <div>
+            <p class="eyebrow eyebrow--light">Selected work</p>
+            <h2 class="section-title" id="projects-title">From research questions to working models.</h2>
+            <p class="section-intro">A sample of active and developing work. Each project is labeled by stage so the visitor can distinguish simulation, prototype, and research-in-progress.</p>
+          </div>
+          <div class="filter-bar" role="group" aria-label="Filter projects by research area">
+            <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-button" type="button" data-filter="media" aria-pressed="false">Media</button>
+            <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Security</button>
+            <button class="filter-button" type="button" data-filter="sensing" aria-pressed="false">Sensing</button>
+            <button class="filter-button" type="button" data-filter="environment" aria-pressed="false">Environment</button>
+          </div>
+        </div>
+        <div class="project-grid" id="project-grid">
+          <article class="project-card" data-area="sensing">
+            <div class="project-topline"><span class="project-category">Computational health sensing</span><span class="project-status">COMSOL simulation</span></div>
+            <h3>Raman–NIR digital twin for non-invasive glucose sensing</h3>
+            <p>A simulation workflow models tissue and glucose spectra, three band-pass channels, detector correction, calibration, and measurement uncertainty.</p>
+            <div class="project-visual" aria-label="Modeled excitation and collection channels">
+              <span class="chip chip--gold">830.35 nm excitation</span><span class="chip">901.3 nm</span><span class="chip">915.5 nm</span><span class="chip chip--teal">920.15 nm</span>
+            </div>
+            <div class="project-metrics" aria-label="Earlier controlled simulation results">
+              <div class="metric"><strong>7.53%</strong><span>MARD</span></div>
+              <div class="metric"><strong>0.990</strong><span>R²</span></div>
+              <div class="metric"><strong>15.77</strong><span>mg/dL RMSE</span></div>
+            </div>
+            <p class="project-note">Earlier Phase 1 controlled simulation only. These are workflow-consistency results, not measured device or clinical accuracy.</p>
+            <details>
+              <summary>See what the model includes</summary>
+              <p>The COMSOL model represents full-spectrum tissue and glucose responses, band-pass weighting, APD/photodiode surrogate signals, repeated noisy measurements, quadratic calibration, and limit-of-detection analysis. Validation with solutions and tissue phantoms is planned as a separate stage.</p>
+            </details>
+          </article>
+
+          <article class="project-card" data-area="media">
+            <div class="project-topline"><span class="project-category">Trustworthy media</span><span class="project-status">Dataset in development</span></div>
+            <h3>Audio–visual synchronization for media integrity</h3>
+            <p>A dataset and evaluation direction centered on a focused question: how reliably can models identify manipulation when visual and audio timing no longer agree?</p>
+            <div class="project-visual">
+              <span class="chip chip--teal">Video frames</span><span class="chip">↔</span><span class="chip chip--gold">Audio cues</span><span class="chip">Sync analysis</span>
+            </div>
+            <details>
+              <summary>See the research focus</summary>
+              <p>The work examines timing relationships as evidence for authenticity and aims to make the benchmark useful for comparing detection methods under controlled synchronization changes. Dataset design and validation are ongoing.</p>
+            </details>
+          </article>
+
+          <article class="project-card" data-area="security">
+            <div class="project-topline"><span class="project-category">AI security &amp; human protection</span><span class="project-status">Prototype / study design</span></div>
+            <h3>Agentic fraud prevention for older adults</h3>
+            <p>A multimodal fraud prevention concept connects real-time risk detection with clear, user-centered guidance to help people pause and evaluate suspicious interactions.</p>
+            <div class="project-visual">
+              <span class="chip chip--gold">Detect</span><span class="chip">→</span><span class="chip chip--teal">Explain</span><span class="chip">→</span><span class="chip">Support a choice</span>
+            </div>
+            <details>
+              <summary>See the planned research path</summary>
+              <p>The prototype explores how detection, risk assessment, and agentic intervention can work together. Planned evaluation includes a structured comparison of intervention approaches with older adults.</p>
+            </details>
+          </article>
+
+          <article class="project-card" data-area="environment">
+            <div class="project-topline"><span class="project-category">AI for agriculture</span><span class="project-status">Model development</span></div>
+            <h3>SoilFusionNet for site-specific irrigation</h3>
+            <p>A dual-stream vision model combines UAV RGB and thermal imagery with IoT soil measurements to estimate moisture and nitrogen across a field.</p>
+            <div class="project-visual">
+              <span class="chip chip--teal">RGB</span><span class="chip chip--gold">Thermal</span><span class="chip">+</span><span class="chip">IoT sensors</span><span class="chip">→ soil map</span>
+            </div>
+            <details>
+              <summary>See how the pieces connect</summary>
+              <p>Cross-modal attention links visible and thermal patterns, while field sensors and laboratory measurements support local estimation. The aim is to translate these estimates into spatially informed irrigation and nutrient decisions.</p>
+            </details>
+          </article>
+        </div>
+        <p class="works-footnote">Research stages and descriptions reflect the current portfolio. Simulation results are explicitly identified as such; project pages and publication records provide the latest updates.</p>
+      </div>
+    </section>
+
+    <section class="bio" id="about" aria-labelledby="about-title">
+      <div class="wrap bio-grid">
+        <aside class="bio-aside">
+          <span class="bio-aside-label">Research profile</span>
+          <h3>AI for systems that need to earn trust.</h3>
+          <p>Assistant Professor · School of Computing<br>Georgia Southern University</p>
+        </aside>
+        <div class="bio-copy">
+          <p class="eyebrow">About</p>
+          <h2 class="section-title" id="about-title">A computer scientist working across signals, systems, and society.</h2>
+          <p>I am an Assistant Professor in the School of Computing at Georgia Southern University, where I joined in 2025. I earned a Ph.D. in Computational Science (major: Computer Science) from the University of Southern Mississippi in 2021.</p>
+          <p>My academic work spans faculty, teaching, and research appointments at universities in the United States and Bangladesh. Before academia, I worked in software engineering and team leadership. That applied background shapes how I approach mentoring, collaboration, and research that connects technical questions with real settings.</p>
+          <p>My research brings machine learning and computational methods to problems in media authenticity, cyber defense, health sensing, and agriculture. I am especially interested in how systems behave when data are noisy, conditions shift, or people need a clear reason to trust the output.</p>
+          <div class="credential-row">
+            <div class="credential"><strong>Current appointment</strong><span>Assistant Professor · School of Computing, Georgia Southern</span></div>
+            <div class="credential"><strong>Doctoral training</strong><span>Ph.D. in Computational Science · University of Southern Mississippi</span></div>
+            <div class="credential"><strong>Academic career</strong><span>Teaching and research appointments in the U.S. and Bangladesh</span></div>
+            <div class="credential"><strong>Industry experience</strong><span>Software engineering and team leadership, 2011–2016</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="teaching" id="teaching" aria-labelledby="teaching-title">
+      <div class="wrap teaching-grid">
+        <div>
+          <p class="eyebrow">Teaching &amp; mentoring</p>
+          <h2 class="section-title" id="teaching-title">Build foundations. Then work on real problems.</h2>
+          <p class="section-intro">I teach and mentor across core computing and applied AI, helping students connect technical foundations to responsible systems design. Recent courses include AI in Real-Time Cybersecurity, Network Security, and Fundamentals of Information Systems Security.</p>
+          <div class="student-note"><strong>Prospective graduate students:</strong> I welcome conversations with students interested in trustworthy AI, cyber defense, deepfake forensics, computational health sensing, and multimodal learning.</div>
+        </div>
+        <div class="teaching-list" aria-label="Teaching interests">
+          <div class="teaching-item">Programming and data structures</div>
+          <div class="teaching-item">Database systems and SQL</div>
+          <div class="teaching-item">Algorithms and data analytics</div>
+          <div class="teaching-item">Machine learning and data mining</div>
+          <div class="teaching-item">AI in real-time cybersecurity</div>
+          <div class="teaching-item">Secure software development</div>
+          <div class="teaching-item">AI in bioinformatics</div>
+          <div class="teaching-item">Cybersecurity innovation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow eyebrow--light">Connect</p>
+          <h2 class="section-title" id="contact-title">Good research grows through useful questions and generous collaboration.</h2>
+          <p class="section-intro">For research collaboration, invited talks, student research opportunities, and academic inquiries, please get in touch.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-email" href="mailto:mrana@georgiasouthern.edu">mrana@georgiasouthern.edu <span aria-hidden="true">↗</span></a>
+          <a href="Md-Shohel-Rana-CV.pdf" download>Curriculum vitae (PDF) ↓</a>
+          <a href="https://scholars.georgiasouthern.edu/en/persons/md-shohel-rana/" target="_blank" rel="noopener noreferrer">Georgia Southern research profile ↗</a>
+          <a href="https://scholar.google.com/citations?user=jjM9zsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar publications ↗</a>
+          <a href="https://orcid.org/0000-0001-6626-4189" target="_blank" rel="noopener noreferrer">ORCID ↗</a>
+          <a href="https://www.researchgate.net/profile/Md-Rana-35" target="_blank" rel="noopener noreferrer">ResearchGate ↗</a>
+          <a href="https://dblp.org/pid/225/3704.html" target="_blank" rel="noopener noreferrer">DBLP bibliography ↗</a>
+          <a href="https://www.linkedin.com/in/md-shohel-rana-ph-d-21020681/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="https://www.msrana.info" target="_blank" rel="noopener noreferrer">Personal website ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Md. Shohel Rana · Personal academic portfolio · Not an official Georgia Southern University website</p>
+      <div class="footer-links">
+        <a href="#top" class="to-top">Back to top ↑</a>
+        <a href="mailto:mrana@georgiasouthern.edu">Email</a>
+        <a href="https://scholars.georgiasouthern.edu/en/persons/md-shohel-rana/" target="_blank" rel="noopener noreferrer">Research profile ↗</a>
+        <a href="https://scholar.google.com/citations?user=jjM9zsAAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar ↗</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var nav = document.getElementById("primary-navigation");
+      if (toggle && nav) {
+        toggle.addEventListener("click", function () {
+          var open = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", String(!open));
+          toggle.setAttribute("aria-label", open ? "Open navigation menu" : "Close navigation menu");
+          nav.classList.toggle("is-open", !open);
+        });
+        nav.querySelectorAll("a").forEach(function (link) {
+          link.addEventListener("click", function () {
+            nav.classList.remove("is-open");
+            toggle.setAttribute("aria-expanded", "false");
+            toggle.setAttribute("aria-label", "Open navigation menu");
+          });
+        });
+      }
+
+      var filters = document.querySelectorAll(".filter-button");
+      var cards = document.querySelectorAll(".project-card");
+      filters.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var selected = button.getAttribute("data-filter");
+          filters.forEach(function (other) {
+            other.setAttribute("aria-pressed", String(other === button));
+          });
+          cards.forEach(function (card) {
+            card.hidden = selected !== "all" && card.getAttribute("data-area") !== selected;
+          });
+        });
+      });
+    }());
+  </script>
+</body>
+</html>
+
