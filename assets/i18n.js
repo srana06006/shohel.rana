@@ -7,11 +7,12 @@ languageKeys.forEach(function(key,index){
   textHi[key]=extra.hi[index]===undefined?null:extra.hi[index];
   textAr[key]=extra.ar[index]===undefined?null:extra.ar[index];
 });
-Object.assign(meta,extra.meta||{});
+var spanish=window.PORTFOLIO_ES_TRANSLATIONS||{};
+Object.assign(meta,extra.meta||{}, {es:spanish.meta||{}});
 
-var translations={en:{},bn:textBn,hi:textHi,ar:textAr};
-var ariaTranslations=extra.aria||{};
-var altTranslations=extra.alt||{};
+var translations={en:{},bn:textBn,hi:textHi,ar:textAr,es:spanish.text||{}};
+var ariaTranslations=Object.assign({},extra.aria||{},{es:spanish.aria||{}});
+var altTranslations=Object.assign({},extra.alt||{},{es:spanish.alt||{}});
 var originals=[];
 var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
 var node;
@@ -28,7 +29,7 @@ var altItems=Array.from(document.querySelectorAll("img[alt]")).map(function(el){
   return {el:el,english:el.getAttribute("data-i18n-alt-en")||el.getAttribute("alt"),bengali:el.getAttribute("data-i18n-alt-bn")};
 });
 var currentLanguage="en";
-var supportedLanguages=["en","bn","ar","hi"];
+var supportedLanguages=["en","bn","ar","hi","es"];
 var select=document.getElementById("language-select");
 var navToggle=document.querySelector(".nav-toggle");
 var nav=document.getElementById("primary-navigation");
@@ -40,7 +41,8 @@ function setMenuLabel(){
     en:{open:"Open navigation menu",close:"Close navigation menu"},
     bn:{open:"নেভিগেশন মেনু খুলুন",close:"নেভিগেশন মেনু বন্ধ করুন"},
     hi:{open:"नेविगेशन मेनू खोलें",close:"नेविगेशन मेनू बंद करें"},
-    ar:{open:"افتح قائمة التنقل",close:"أغلق قائمة التنقل"}
+    ar:{open:"افتح قائمة التنقل",close:"أغلق قائمة التنقل"},
+    es:{open:"Abrir el menú de navegación",close:"Cerrar el menú de navegación"}
   };
   navToggle.setAttribute("aria-label",labels[currentLanguage][open?"close":"open"]);
 }
